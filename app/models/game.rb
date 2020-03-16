@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class Game < ApplicationRecord
+  validates :total_score, presence: true
+  validates :user_name, presence: true
+  validates :words, presence: false
+  
   def initialize(*args)
     super(*args)
     self.board = generate_board
