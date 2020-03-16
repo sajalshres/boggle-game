@@ -1,0 +1,31 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+	// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+
+	// List of extensions which should be recommended for users of this workspace.
+	"recommendations": [
+    // Utils
+    "ms-azuretools.vscode-docker",
+    "gamunu.vscode-yarn",
+    "eamodio.gitlens",
+    // Debugger
+    "msjsdiag.debugger-for-chrome",
+    // Javascript
+    "dsznajder.es7-react-js-snippets",
+    "dbaeumer.vscode-eslint",
+    // Ruby and Rails
+    "bung87.rails",
+    "rebornix.ruby",
+    "castwide.solargraph",
+    "misogi.ruby-rubocop",
+    "vortizhe.simple-ruby-erb",
+    "bung87.vscode-gemfile",
+    "sianglim.slim",
+    "wingrunr21.vscode-ruby",
+    "hridoy.rails-snippets",
+	],
+	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+	"unwantedRecommendations": [
+		
+	]
+}
