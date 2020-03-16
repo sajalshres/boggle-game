@@ -1,0 +1,9 @@
+.main {
+    grid-area: main;
+    padding-top: 10px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}

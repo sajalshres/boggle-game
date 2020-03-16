@@ -1,0 +1,18 @@
+$height-header: 100px;
+$height-footer: 50px;
+
+.App {
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: $height-header 1fr $height-footer;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+    width: 60%;
+    min-width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    justify-items: center;
+}

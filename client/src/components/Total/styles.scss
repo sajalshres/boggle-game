@@ -1,0 +1,14 @@
+.total {
+    display: flex;
+    width: 120px;
+    margin: 10px 10px;
+    justify-content: center;
+
+    &__title {
+        padding: 12px 20px;
+    }
+
+    &__score {
+        padding: 12px 20px;
+    }
+}

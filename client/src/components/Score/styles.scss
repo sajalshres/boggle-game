@@ -1,0 +1,19 @@
+.score {
+    width: 300px;
+    border: 1px solid black;
+    
+    &-table {
+        width: 100%;
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        &__word {
+            width: 70%;
+        }
+    }
+
+}

@@ -1,0 +1,18 @@
+.submit {
+    display: flex;
+    width: 80%;
+    margin: 10px 10px;
+    justify-content: center;
+
+    &__input {
+        width: 60%;
+        padding: 12px 20px;
+        box-sizing: border-box;
+    }
+    
+    &__button {
+        width: 80px;
+        padding: 12px 20px;
+        margin-left: 10px
+    }
+}
