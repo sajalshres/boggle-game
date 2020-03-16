@@ -3,20 +3,30 @@
 * @author sajalshres
 */
 
-import React from 'react';
+import React, { Component } from 'react';
 import Game from '../Game/index';
 import Total from '../Total/index';
 import Submit from '../Submit/index';
 import './styles.scss'
 
-function Main() {
+class Main extends Component {
+
+  componentDidMount(){
+    fetch('/api/v1/games')
+      .then(res => res.json())
+      .then(data => console.log(data))
+  }
+
+  render() {
     return (
-        <main className='main'>
+      <main className='main'>
             <Game />
             <Total />
             <Submit />
         </main>
     );
+  }
 }
+
 
 export default Main
