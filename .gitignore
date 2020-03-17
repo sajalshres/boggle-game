@@ -68,3 +68,9 @@ yarn-debug.log*
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Yarn
+**/.yarn/cache
+**/.yarn/unplugged
+**/.yarn/build-state.yml
+**/.pnp.*
