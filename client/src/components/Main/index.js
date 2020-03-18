@@ -4,9 +4,9 @@
 */
 
 import React, { Component } from 'react';
-import Game from '../Game/index';
-import Total from '../Total/index';
-import Submit from '../Submit/index';
+import Game from '../Game';
+import Total from '../Total';
+import Submit from '../Submit';
 import './styles.scss'
 
 class Main extends Component {

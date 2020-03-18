@@ -4,8 +4,8 @@
 */
 
 import React from 'react';
-import Board from '../Board/index';
-import Score from '../Score/index';
+import Board from '../Board';
+import Score from '../Score';
 import './styles.scss';
 
 function Game() {
