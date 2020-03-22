@@ -4,39 +4,47 @@
  */
 
 import React from 'react';
+import { connect } from 'react-redux';
+import { appendInput } from '../../redux/actions';
+import Letter from '../Letter';
 import './styles.scss';
 
 class Board extends React.Component {
+  constructor(props) {
+    super(props);
+    this.getLetterDivs = this.getLetterDivs.bind(this);
+  }
+
+  getLetterDivs(board) {
+    let boardLetters = board
+      ? board
+      : Array(16)
+          .fill(' ')
+          .join('');
+    return boardLetters.split('').map((letter, idx) => {
+      return (
+        <Letter
+          letter={letter}
+          key={idx}
+          row={idx % 4}
+          col={Math.floor(idx / 4)}
+          appendInput={this.props.appendInput}
+        />
+      );
+    });
+  }
+
   render() {
-    return (
-      <div className="board">
-        <div className="board__row">
-          <button className="board__row-item">A</button>
-          <button className="board__row-item">B</button>
-          <button className="board__row-item">D</button>
-          <button className="board__row-item">A</button>
-        </div>
-        <div className="board__row">
-          <button className="board__row-item">A</button>
-          <button className="board__row-item">B</button>
-          <button className="board__row-item">D</button>
-          <button className="board__row-item">A</button>
-        </div>
-        <div className="board__row">
-          <button className="board__row-item">A</button>
-          <button className="board__row-item">B</button>
-          <button className="board__row-item">D</button>
-          <button className="board__row-item">A</button>
-        </div>
-        <div className="board__row">
-          <button className="board__row-item">A</button>
-          <button className="board__row-item">B</button>
-          <button className="board__row-item">D</button>
-          <button className="board__row-item">A</button>
-        </div>
-      </div>
-    );
+    return <div className="board">{this.getLetterDivs(this.props.board)}</div>;
   }
 }
 
-export default Board;
+const mapStateToProps = state => ({
+  board: state.gameReducer.board
+});
+
+const mapDispatchToProps = {
+  appendInput
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Board);

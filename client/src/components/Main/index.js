@@ -18,7 +18,6 @@ class Main extends Component {
   }
 
   render() {
-    console.log('Main:PROPS===>', this.props);
     return (
       <main className="main">
         <Game />
@@ -30,9 +29,9 @@ class Main extends Component {
 }
 
 const mapStateToProps = state => ({
-  pending: state.gameReducer.pending,
-  game: state.gameReducer.game,
-  error: state.gameReducer.error
+  fetchPending: state.gameReducer.fetchPending,
+  board: state.gameReducer.board,
+  fetchError: state.gameReducer.fetchError
 });
 
 const mapDispatchToProps = {

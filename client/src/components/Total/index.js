@@ -1,19 +1,24 @@
 /**
-* @file Total score component of boggle game
-* @author sajalshres
-*/
+ * @file Total score component of boggle game
+ * @author sajalshres
+ */
 
 import React from 'react';
+import { connect } from 'react-redux';
 import './styles.scss';
 
-function Total() {
-    return (
-        <div className="total">
-            <div className="total__title">Total</div>
-            <div className="total__score">10</div>
-        </div>
-    );
+function Total({ total }) {
+  return (
+    <div className="total">
+      <div className="total__title">Total</div>
+      <div className="total__score">{total}</div>
+    </div>
+  );
 }
 
-export default Total
+const mapStateToProps = state => {
+  const total = state.gameReducer.totalScore;
+  return { total };
+};
 
+export default connect(mapStateToProps, null)(Total);

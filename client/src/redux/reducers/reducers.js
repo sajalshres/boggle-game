@@ -1,18 +1,28 @@
 import {
-  FETCH_GAME_PENDING,
+  API_REQUEST_PENDING,
+  API_REQUEST_ERROR,
   FETCH_GAME_SUCCESS,
-  FETCH_GAME_ERROR
+  UPDATE_INPUT,
+  APPEND_INPUT,
+  RESET_INPUT,
+  UPDATE_WORD,
+  UPDATE_SCORE
 } from '../actions/actionTypes';
 
 const initialState = {
-  pending: false,
-  game: {},
-  error: null
+  fetchPending: false,
+  fetchError: null,
+  board: null,
+  words: [],
+  input: '',
+  totalScore: 0,
+  timeLimit: 60,
+  gameStarted: false
 };
 
 export function gameReducer(state = initialState, action) {
   switch (action.type) {
-    case FETCH_GAME_PENDING:
+    case API_REQUEST_PENDING:
       return {
         ...state,
         pending: true,
@@ -22,19 +32,48 @@ export function gameReducer(state = initialState, action) {
       return {
         ...state,
         pending: false,
-        game: action.payload.game
+        board: action.payload.board,
+        gameStarted: true
       };
-    case FETCH_GAME_ERROR:
+    case API_REQUEST_ERROR:
       return {
         ...state,
         pending: false,
         error: action.payload.error
+      };
+    case UPDATE_INPUT:
+      return {
+        ...state,
+        input: action.payload.input
+          .toUpperCase()
+          .split(' ')
+          .join('')
+      };
+    case APPEND_INPUT:
+      return Object.assign({}, state, {
+        input: state.input + action.payload.letter
+      });
+    case RESET_INPUT:
+      return {
+        ...state,
+        input: ''
+      };
+    case UPDATE_WORD:
+      return Object.assign({}, state, {
+        words: [...state.words, action.payload.word],
+        totalScore: state.totalScore + action.payload.word.length
+      });
+    case UPDATE_SCORE:
+      return {
+        ...state,
+        totalScore: action.payload.total
       };
     default:
       return state;
   }
 }
 
-export const getGame = state => state.game;
-export const gethGamePending = state => state.pending;
-export const getGameError = state => state.error;
+export const getBoard = state => state.gameReducer.board;
+export const gethFetchPending = state => state.gameReducer.fetchPending;
+export const getFetchError = state => state.gameReducer.fetchError;
+export const getWords = state => state.gameReducer.words;

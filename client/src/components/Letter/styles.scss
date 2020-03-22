@@ -1,0 +1,10 @@
+.board {
+  &__letter {
+    max-width: 80px;
+    max-height: 80px;
+    line-height: 80px;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+  }
+}
