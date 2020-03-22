@@ -11,7 +11,7 @@ import Total from '../Total';
 import Submit from '../Submit';
 import './styles.scss';
 
-class Main extends Component {
+class Boogle extends Component {
   componentDidMount() {
     const { fetchGame } = this.props;
     fetchGame();
@@ -19,11 +19,11 @@ class Main extends Component {
 
   render() {
     return (
-      <main className="main">
+      <div className="container">
         <Game />
         <Total />
         <Submit />
-      </main>
+      </div>
     );
   }
 }
@@ -38,4 +38,4 @@ const mapDispatchToProps = {
   fetchGame
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Boogle);

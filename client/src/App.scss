@@ -16,3 +16,17 @@ $height-footer: 50px;
     margin: 0 auto;
     justify-items: center;
 }
+
+.main {
+  grid-area: main;
+  padding-top: 10px;
+  width: 800px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}

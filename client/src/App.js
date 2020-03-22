@@ -1,20 +1,30 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import store from './redux/store';
 import Header from './components/Header';
-import Main from './components/Main';
+import Home from './components/Home';
+import Rank from './components/Rank';
+import Boogle from './components/Boogle';
 import Footer from './components/Footer';
 import './App.scss';
 
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        <Header />
-        <Main />
-        <Footer />
-      </div>
+      <Router>
+        <div className="App">
+          <Header />
+          <main className="main">
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/game" component={Boogle} />
+              <Route path="/rank" component={Rank} />
+            </Switch>
+          </main>
+          <Footer />
+        </div>
+      </Router>
     </Provider>
   );
 }
