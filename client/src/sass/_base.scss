@@ -1,0 +1,49 @@
+
+/*
+  Base modules
+  Contains resets, variables, mixins, and any utility classes.
+*/
+
+// Variables
+$color-primary: #42a5f5;
+$color-primary-dark: #0077c2;
+$color-primary-light: #80d6ff;
+
+$color-secondary: #eeeeee;
+$color-secondary-dark: #aeaeae;
+$color-secondary-light: #ffffff;
+
+$color-black: #000000;
+$color-white: #ffffff;
+
+$height-header: 150px;
+$height-footer: 50px;
+
+
+// Resets
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+a {
+  text-decoration: none;
+}
+
+.is-justified {
+  text-align: justify;
+}
+
+.is-centered {
+  text-align: center;
+}
+
+.is-1 {
+  font-size: 24px;
+}
+
+.is-2 {
+  font-size: 20px;
+}

@@ -6,10 +6,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import fetchGame from '../../redux/actions/fetchGame';
-import Game from '../Game';
-import Total from '../Total';
-import Submit from '../Submit';
-import './styles.scss';
+import Game from './components/Game';
+import Total from './components/Total';
+import Submit from './components/Submit';
 
 class Boogle extends Component {
   componentDidMount() {

@@ -1,0 +1,89 @@
+/*
+  Layout module
+  Contains  the layout, such as the container and any grid systems.
+*/
+
+.App {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: $height-header 1fr $height-footer;
+  grid-template-areas:
+      'header'
+      'main'
+      'footer';
+  width: 60%;
+  min-width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 10px
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.main {
+  grid-area: main;
+  padding-top: 10px;
+  width: 800px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.home {
+  width: 80%;
+  margin: auto;
+}
+
+.game {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: 10px 10px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(80px, auto);
+}
+
+.score {
+  width: 300px;
+}
+
+.total {
+  display: flex;
+  width: 120px;
+  margin: 10px 10px;
+  justify-content: center;
+}
+
+.submit {
+  display: flex;
+  width: 80%;
+  margin: 10px 10px;
+  justify-content: center;
+}
+
+.rank {
+  width: 80%;
+  margin: auto;
+}

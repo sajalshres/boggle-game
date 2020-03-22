@@ -1,0 +1,151 @@
+/*
+  Components module
+  Contains reusable components like  buttons, navbars etc.
+*/
+
+// Logo component
+.logo {
+  font-size: 36px;
+  font-style: italic;
+  color: $color-primary;
+  font-weight: bolder;
+  text-shadow: 2px 2px 2px #C5C5C5;
+  margin: 0 auto;
+}
+
+// Button component
+.btn {
+  display: block;
+  border: none;
+  background-color: $color-primary;
+  padding: 16px 16px; 
+  color: white;
+  border-radius: 50%;
+  height: 20px;
+  box-shadow: 2px 2px 2px $color-secondary;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+// Navigation component
+.nav {
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+
+  &-item {
+    float: left;
+    margin: 0px 10px;
+  }
+}
+
+// Title component
+.title {
+  color: $color-primary;
+  padding: 10px 0px;
+  border-bottom: 1px solid $color-black;
+}
+
+// Link component
+.link {
+  text-decoration: none;
+  color: $color-primary-dark;
+}
+
+// Table component
+.table {
+  th, td {
+    text-align: left;
+    padding: 10px 15px;
+  }
+
+  th {
+    background-color: $color-primary;
+    color: $color-secondary-light;
+  }
+
+  td {
+    background-color: $color-secondary;
+    font-size: 14px;
+  }
+
+  tr:hover {
+    opacity: 0.8;
+  }
+}
+
+.letter {
+  max-width: 80px;
+  max-height: 80px;
+  line-height: 80px;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  background-color: $color-secondary;
+  border: none;
+  box-shadow: 2px 2px 2px $color-secondary-dark;
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}
+
+.score {
+  &-word {
+    width: 70%;
+  }
+}
+
+.total {
+  &-title {
+    padding: 12px 20px;
+  }
+
+  &-score {
+    padding: 12px 20px;
+  }
+}
+
+.submit {
+  &-input {
+    width: 60%;
+    padding: 12px 20px;
+    border: 1px solid $color-secondary;
+    box-sizing: border-box;
+  }
+
+  &-button {
+    width: 80px;
+    padding: 12px 20px;
+    margin-left: 10px;
+    border: none;
+    background-color: $color-primary;
+    color: $color-secondary-light;
+  }
+
+  &-button:hover {
+    background-color: $color-primary-dark;
+    box-shadow: 2px 2px 2px $color-secondary-dark;
+  }
+}
+
+.rank {
+  &-words {
+    max-width: 200px;
+  }
+
+  &-score {
+    width: 50px;
+  }
+
+  &-date {
+    width: 80px;
+  }
+}
+
+.love {
+  color: red;
+}

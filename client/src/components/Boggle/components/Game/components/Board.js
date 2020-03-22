@@ -5,9 +5,8 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { appendInput } from '../../redux/actions';
-import Letter from '../Letter';
-import './styles.scss';
+import { appendInput } from '../../../../../redux/actions';
+import Letter from './Letter';
 
 class Board extends React.Component {
   constructor(props) {

@@ -5,13 +5,12 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import './styles.scss';
 
 function Total({ total }) {
   return (
     <div className="total">
-      <div className="total__title">Total</div>
-      <div className="total__score">{total}</div>
+      <div className="total-title">Total</div>
+      <div className="total-score">{total}</div>
     </div>
   );
 }

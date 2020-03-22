@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import './styles.scss';
 
 function Score({ words }) {
   const showScore = () => {
@@ -20,11 +19,11 @@ function Score({ words }) {
   };
   return (
     <div className="score">
-      <table className="score-table">
+      <table className="table">
         <thead>
           <tr>
-            <th className="score-table__word">Word</th>
-            <th className="score-table__score">Score</th>
+            <th className="score-word">Word</th>
+            <th className="score-total">Score</th>
           </tr>
         </thead>
         <tbody>{showScore()}</tbody>

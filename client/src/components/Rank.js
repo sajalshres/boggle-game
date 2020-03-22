@@ -1,17 +1,16 @@
 import React from 'react';
-import './styles.scss';
 
 function Rank() {
   return (
     <div className="rank">
-      <h1 className="rank__title">Rank Page</h1>
-      <table className="rank-table">
+      <h1 className="title is-1 is-centered">Rank Page</h1>
+      <table className="table">
         <thead>
           <tr>
-            <th className="rank-table__name">Name</th>
-            <th className="rank-table__score">Score</th>
-            <th className="rank-table__words">Words</th>
-            <th className="rank-table__date">Date</th>
+            <th className="rank-name">Name</th>
+            <th className="rank-score">Score</th>
+            <th className="rank-words">Words</th>
+            <th className="rank-date">Date</th>
           </tr>
         </thead>
         <tbody>

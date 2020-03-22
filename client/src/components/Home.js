@@ -1,18 +1,17 @@
 import React from 'react';
-import './styles.scss';
 
 function Home() {
   return (
     <div className="home">
-      <h1 className="home__title">Welcome</h1>
-      <div className="home__description">
-        <p>
+      <h1 className="title is-1 is-centered">Welcome</h1>
+      <div className="description">
+        <p className="is-justified">
           Boggle is a word game invented by Allan Turoff and originally
           distributed by Parker Brothers. The game is played using a plastic
           grid of lettered dice, in which players attempt to find words in
           sequences of adjacent letters.
         </p>
-        <h2>Rules</h2>
+        <h2 className="title is-2 is-centered">Rules</h2>
         <ul>
           <li>Players have three minutes</li>
           <li>Player will have to find as many words as thay can in board.</li>
@@ -29,7 +28,7 @@ function Home() {
         <a
           href="https://en.wikipedia.org/wiki/Boggle"
           target="_blank"
-          className="read-more"
+          className="link"
         >
           read more...
         </a>

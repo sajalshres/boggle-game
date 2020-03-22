@@ -5,9 +5,9 @@ import store from './redux/store';
 import Header from './components/Header';
 import Home from './components/Home';
 import Rank from './components/Rank';
-import Boogle from './components/Boogle';
+import Boogle from './components/Boggle';
 import Footer from './components/Footer';
-import './App.scss';
+import './main.scss';
 
 function App() {
   return (

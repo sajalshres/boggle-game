@@ -5,9 +5,8 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateInput, updateScore, resetInput } from '../../redux/actions';
-import validateWord from '../../redux/actions/validateWord';
-import './styles.scss';
+import { updateInput, updateScore, resetInput } from '../../../redux/actions';
+import validateWord from '../../../redux/actions/validateWord';
 
 class Submit extends React.Component {
   constructor(props) {
@@ -125,7 +124,7 @@ class Submit extends React.Component {
     return (
       <div className="submit">
         <input
-          className="submit__input"
+          className="submit-input"
           type="text"
           id="name"
           name="name"
@@ -133,7 +132,7 @@ class Submit extends React.Component {
           onChange={event => this.props.updateInput(event.target.value)}
         />
         <button
-          className="submit__button"
+          className="submit-button"
           disabled={!this.props.gameStarted}
           onClick={this.handleClick}
         >
