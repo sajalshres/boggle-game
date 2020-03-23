@@ -6,7 +6,10 @@ import {
   APPEND_INPUT,
   RESET_INPUT,
   UPDATE_WORD,
-  UPDATE_SCORE
+  UPDATE_SCORE,
+  START_GAME,
+  END_GAME,
+  FETCH_RANK_SUCCESS
 } from './actionTypes';
 
 export const apiRequestPending = () => ({ type: API_REQUEST_PENDING });
@@ -41,4 +44,17 @@ export const updateWord = word => ({
 export const updateScore = total => ({
   type: UPDATE_SCORE,
   payload: { total }
+});
+
+export const startGame = () => ({
+  type: START_GAME
+});
+
+export const endGame = () => ({
+  type: END_GAME
+});
+
+export const fetchRankSuccess = ranks => ({
+  type: FETCH_RANK_SUCCESS,
+  payload: { ranks }
 });

@@ -6,7 +6,9 @@ import {
   APPEND_INPUT,
   RESET_INPUT,
   UPDATE_WORD,
-  UPDATE_SCORE
+  UPDATE_SCORE,
+  START_GAME,
+  END_GAME
 } from '../actions/actionTypes';
 
 const initialState = {
@@ -16,7 +18,7 @@ const initialState = {
   words: [],
   input: '',
   totalScore: 0,
-  timeLimit: 60,
+  timeLimit: 180,
   gameStarted: false
 };
 
@@ -25,21 +27,21 @@ export function gameReducer(state = initialState, action) {
     case API_REQUEST_PENDING:
       return {
         ...state,
-        pending: true,
+        fetchPending: true,
         error: null
       };
     case FETCH_GAME_SUCCESS:
       return {
         ...state,
-        pending: false,
+        fetchPending: false,
         board: action.payload.board,
         gameStarted: true
       };
     case API_REQUEST_ERROR:
       return {
         ...state,
-        pending: false,
-        error: action.payload.error
+        fetchPending: false,
+        fetchError: action.payload.error
       };
     case UPDATE_INPUT:
       return {
@@ -67,6 +69,16 @@ export function gameReducer(state = initialState, action) {
       return {
         ...state,
         totalScore: action.payload.total
+      };
+    case START_GAME:
+      return {
+        ...state,
+        gameStarted: true
+      };
+    case END_GAME:
+      return {
+        ...state,
+        gameStarted: false
       };
     default:
       return state;
