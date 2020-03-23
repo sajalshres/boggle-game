@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import fetchRank from '../redux/actions/fetchRank';
 
 class Rank extends Component {
-  componentDidMount() {
+  componentDidMount = () => {
     const { fetchRank } = this.props;
     fetchRank();
     console.log(this.props.ranks);
-  }
+  };
 
   getRanks = () => {
     return this.props.ranks.map((rank, index) => {
@@ -45,7 +45,9 @@ class Rank extends Component {
 const mapStateToProps = state => ({
   fetchPending: state.rankReducer.fetchPending,
   fetchError: state.rankReducer.fetchError,
-  ranks: state.rankReducer.ranks
+  ranks: state.rankReducer.ranks.sort((rank1, rank2) =>
+    rank1.total_score < rank2.total_score ? 1 : -1
+  )
 });
 
 const mapDispatchToProps = {

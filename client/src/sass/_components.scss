@@ -9,7 +9,7 @@
   font-style: italic;
   color: $color-primary;
   font-weight: bolder;
-  text-shadow: 2px 2px 2px #C5C5C5;
+  text-shadow: 2px 2px 2px #c5c5c5;
   margin: 0 auto;
 }
 
@@ -18,7 +18,7 @@
   display: block;
   border: none;
   background-color: $color-primary;
-  padding: 16px 16px; 
+  padding: 16px 16px;
   color: white;
   border-radius: 50%;
   height: 20px;
@@ -57,7 +57,8 @@
 // Table component
 .table {
   width: 100%;
-  th, td {
+  th,
+  td {
     text-align: left;
     padding: 10px 15px;
   }
@@ -77,6 +78,7 @@
   }
 }
 
+// Letter component for board
 .letter {
   max-width: 80px;
   max-height: 80px;
@@ -94,12 +96,14 @@
   }
 }
 
+// Score
 .score {
   &-word {
     width: 70%;
   }
 }
 
+// Total
 .total {
   &-timer {
     padding: 12px 20px;
@@ -122,6 +126,7 @@
   }
 }
 
+// submit word
 .submit {
   &-input {
     width: 60%;
@@ -140,11 +145,13 @@
   }
 
   &-button:hover {
+    cursor: pointer;
     background-color: $color-primary-dark;
     box-shadow: 2px 2px 2px $color-secondary-dark;
   }
 }
 
+// Rank component
 .rank {
   &-words {
     max-width: 200px;
@@ -159,12 +166,115 @@
   }
 }
 
+// Love component in the footer
 .love {
   color: red;
 }
 
+// Start button
 .start-btn {
   padding: 12px 20px;
   border: none;
   box-shadow: 2px 2px 2px $color-secondary-dark;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// A generic modal
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    max-width: 400px;
+    top: 30%;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 16px;
+    background-color: $color-primary;
+    color: white;
+  }
+
+  &-title {
+    width: 80%;
+  }
+
+  &-body {
+    padding: 2px 16px;
+  }
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+// Close button for modal
+.close {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Submit rank for the modal
+.submit-rank {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    padding: 0px;
+    margin: 10px 0px;
+  }
+
+  &__score {
+    padding: 0px;
+    margin: 10px 0px;
+  }
+
+  &__input {
+    width: 60%;
+    padding: 10px 0px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  &__button {
+    width: 80px;
+    padding: 10px 0px;
+    margin: 10px;
+    border: none;
+    background-color: $color-primary;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-primary-dark;
+    }
+  }
 }

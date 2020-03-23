@@ -6,7 +6,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function Score({ words }) {
+const Score = ({ words }) => {
   const showScore = () => {
     return words.map((word, idx) => {
       return (
@@ -30,7 +30,7 @@ function Score({ words }) {
       </table>
     </div>
   );
-}
+};
 
 const mapStateToProps = state => {
   const words = state.gameReducer.words;

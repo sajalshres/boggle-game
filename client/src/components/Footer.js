@@ -4,12 +4,12 @@
  */
 import React from 'react';
 
-function Footer() {
+const Footer = () => {
   return (
     <footer>
       Made with <span className="love">&#10084;</span> by sajalshres
     </footer>
   );
-}
+};
 
 export default Footer;

@@ -14,24 +14,24 @@ class Total extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.intervalId = setInterval(this.timer.bind(this), 1000);
-  }
+  };
 
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     clearInterval(this.intervalId);
-  }
+  };
 
-  timer() {
+  timer = () => {
     this.setState({
       currentCount: this.state.currentCount - 1
     });
     //clear interval
     if (this.state.currentCount < 1) {
       clearInterval(this.intervalId);
-      // Do something -> end game and sumbit score
+      this.props.onTimeOut();
     }
-  }
+  };
 
   render() {
     return (

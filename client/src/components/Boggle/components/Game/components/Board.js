@@ -14,7 +14,7 @@ class Board extends React.Component {
     this.getLetterDivs = this.getLetterDivs.bind(this);
   }
 
-  getLetterDivs(board) {
+  getLetterDivs = board => {
     let boardLetters = board
       ? board
       : Array(16)
@@ -31,7 +31,7 @@ class Board extends React.Component {
         />
       );
     });
-  }
+  };
 
   render() {
     return <div className="board">{this.getLetterDivs(this.props.board)}</div>;

@@ -8,7 +8,6 @@ import {
   UPDATE_WORD,
   UPDATE_SCORE,
   START_GAME,
-  END_GAME,
   RESET_GAME
 } from '../actions/actionTypes';
 
@@ -75,11 +74,6 @@ export function gameReducer(state = initialState, action) {
       return {
         ...initialState,
         gameStarted: true
-      };
-    case END_GAME:
-      return {
-        ...state,
-        gameStarted: false
       };
     case RESET_GAME:
       return {

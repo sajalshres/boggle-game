@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-function Letter(props) {
+const Letter = props => {
   return (
     <button
       className="letter"
@@ -16,6 +16,6 @@ function Letter(props) {
       {props.letter}
     </button>
   );
-}
+};
 
 export default Letter;

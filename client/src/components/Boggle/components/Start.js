@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Start(props) {
+const Start = props => {
   return (
     <div className="total">
       <button className="start-btn" onClick={() => props.fetchGame()}>
@@ -8,6 +8,6 @@ function Start(props) {
       </button>
     </div>
   );
-}
+};
 
 export default Start;

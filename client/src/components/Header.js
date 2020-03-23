@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faGamepad, faTrophy } from '@fortawesome/free-solid-svg-icons';
 
-function Header() {
+const Header = () => {
   return (
     <header className="header">
       <h1 className="logo">Boggle</h1>
@@ -30,6 +30,6 @@ function Header() {
       </ul>
     </header>
   );
-}
+};
 
 export default Header;

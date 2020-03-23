@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Home() {
+const Home = () => {
   return (
     <div className="home">
       <h1 className="title is-1 is-centered">Welcome</h1>
@@ -35,6 +35,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;
