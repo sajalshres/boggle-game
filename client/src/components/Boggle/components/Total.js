@@ -29,7 +29,7 @@ class Total extends React.Component {
     //clear interval
     if (this.state.currentCount < 1) {
       clearInterval(this.intervalId);
-      this.props.onTimeOut();
+      // Do something -> end game and sumbit score
     }
   }
 

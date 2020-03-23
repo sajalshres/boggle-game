@@ -8,7 +8,8 @@ import {
   UPDATE_WORD,
   UPDATE_SCORE,
   START_GAME,
-  END_GAME
+  END_GAME,
+  RESET_GAME
 } from '../actions/actionTypes';
 
 const initialState = {
@@ -32,7 +33,7 @@ export function gameReducer(state = initialState, action) {
       };
     case FETCH_GAME_SUCCESS:
       return {
-        ...state,
+        ...initialState,
         fetchPending: false,
         board: action.payload.board,
         gameStarted: true
@@ -72,13 +73,17 @@ export function gameReducer(state = initialState, action) {
       };
     case START_GAME:
       return {
-        ...state,
+        ...initialState,
         gameStarted: true
       };
     case END_GAME:
       return {
         ...state,
         gameStarted: false
+      };
+    case RESET_GAME:
+      return {
+        state: initialState
       };
     default:
       return state;

@@ -25,6 +25,7 @@ export const RESET_SCORE = 'RESET_SCORE';
 // Game status action types
 export const START_GAME = 'START_GAME';
 export const END_GAME = 'END_GAME';
+export const RESET_GAME = 'RESET_GAME';
 
 // Fetch rank
 export const FETCH_RANK_SUCCESS = 'FETCH_RANK_SUCCESS';

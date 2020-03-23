@@ -6,7 +6,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import fetchGame from '../../redux/actions/fetchGame';
-import { startGame } from '../../redux/actions';
+import { startGame, resetGame } from '../../redux/actions';
 import Game from './components/Game';
 import Total from './components/Total';
 import Submit from './components/Submit';
@@ -18,7 +18,8 @@ class Boogle extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   componentDidMount() {
-    const { fetchGame } = this.props;
+    const { fetchGame, resetGame } = this.props;
+    resetGame();
   }
 
   handleClick(event) {
@@ -49,7 +50,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   fetchGame,
-  startGame
+  startGame,
+  resetGame
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Boogle);

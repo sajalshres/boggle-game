@@ -11,7 +11,7 @@ function Letter(props) {
       className="letter"
       row={props.row}
       col={props.col}
-      onClick={() => props.appendInput(props.letter)}
+      onClick={props.appendInput ? () => props.appendInput(props.letter) : null}
     >
       {props.letter}
     </button>

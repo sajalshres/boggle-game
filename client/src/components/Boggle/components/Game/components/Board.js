@@ -27,7 +27,7 @@ class Board extends React.Component {
           key={idx}
           row={idx % 4}
           col={Math.floor(idx / 4)}
-          appendInput={this.props.appendInput}
+          appendInput={board ? this.props.appendInput : null}
         />
       );
     });

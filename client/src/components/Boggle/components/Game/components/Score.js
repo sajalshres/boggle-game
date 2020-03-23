@@ -26,7 +26,7 @@ function Score({ words }) {
             <th className="score-total">Score</th>
           </tr>
         </thead>
-        <tbody>{showScore()}</tbody>
+        <tbody>{words ? showScore() : null}</tbody>
       </table>
     </div>
   );

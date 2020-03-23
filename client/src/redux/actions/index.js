@@ -9,6 +9,7 @@ import {
   UPDATE_SCORE,
   START_GAME,
   END_GAME,
+  RESET_GAME,
   FETCH_RANK_SUCCESS
 } from './actionTypes';
 
@@ -52,6 +53,10 @@ export const startGame = () => ({
 
 export const endGame = () => ({
   type: END_GAME
+});
+
+export const resetGame = () => ({
+  type: RESET_GAME
 });
 
 export const fetchRankSuccess = ranks => ({
