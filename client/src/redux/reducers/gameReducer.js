@@ -11,7 +11,7 @@ import {
   RESET_GAME
 } from '../actions/actionTypes';
 
-const initialState = {
+export const initialState = {
   fetchPending: false,
   fetchError: null,
   board: null,
