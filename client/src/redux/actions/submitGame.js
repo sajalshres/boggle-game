@@ -3,7 +3,7 @@ import { apiRequestPending, apiRequestError, resetGame } from './index';
 function submitGame(game) {
   return dispatch => {
     dispatch(apiRequestPending());
-    fetch('/api/v1/games/create', {
+    return fetch('/api/v1/games/create', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

@@ -3,7 +3,7 @@ import { apiRequestPending, apiRequestError, fetchRankSuccess } from './index';
 function fetchRank() {
   return dispatch => {
     dispatch(apiRequestPending());
-    fetch('/api/v1/games')
+    return fetch('/api/v1/games')
       .then(response => response.json())
       .then(json => {
         if (json.error) {

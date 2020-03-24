@@ -3,7 +3,7 @@ import { apiRequestPending, apiRequestError, fetchGameSuccess } from './index';
 function fetchGame() {
   return dispatch => {
     dispatch(apiRequestPending());
-    fetch('/api/v1/games/new')
+    return fetch('/api/v1/games/new')
       .then(response => response.json())
       .then(json => {
         if (json.error) {
