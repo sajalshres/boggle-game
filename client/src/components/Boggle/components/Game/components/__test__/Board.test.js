@@ -25,8 +25,9 @@ describe('Board component', () => {
     const store = mockStore(initialState);
     const wrapper = shallow(<Board store={store} />);
     const component = wrapper.dive();
-
+    // Board should be renderd
     expect(component.render()).toHaveLength(1);
+    // Should have length of 16 letters
     expect(component.render().children()).toHaveLength(16);
   });
 });

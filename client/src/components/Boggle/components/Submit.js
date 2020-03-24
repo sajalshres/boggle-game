@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { updateInput, updateScore, resetInput } from '../../../redux/actions';
 import validateWord from '../../../redux/actions/validateWord';
 
-class Submit extends React.Component {
+export class Submit extends React.Component {
   constructor(props) {
     super(props);
 
@@ -18,7 +18,6 @@ class Submit extends React.Component {
   handleClick = event => {
     event.preventDefault();
     if (this.isInputValid()) {
-      console.log('Check word in server');
       this.props.validateWord(this.props.input);
       //this.props.updateScore(29);
     } else {
@@ -85,6 +84,9 @@ class Submit extends React.Component {
     const isAtBottomEdge = pos => pos >= 13;
 
     const moves = [];
+    if (pos > 16) {
+      throw new TypeError('Invalid position type or value');
+    }
     // if pos is not at right edge, can move right
     if (!isAtRightEdge(pos)) {
       moves.push(pos + 1);

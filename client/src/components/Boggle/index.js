@@ -15,7 +15,7 @@ import SubmitRank from './components/SubmitRank';
 import Start from './components/Start';
 import Modal from '../utils/Modal';
 
-class Boogle extends Component {
+export class Boogle extends Component {
   constructor(props) {
     super(props);
 

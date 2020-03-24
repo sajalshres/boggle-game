@@ -8,6 +8,7 @@ describe('Score component', () => {
   let mockStore;
   let initialState;
   let store;
+
   beforeEach(() => {
     mockStore = configureStore();
     initialState = {
@@ -17,6 +18,7 @@ describe('Score component', () => {
     };
     store = mockStore(initialState);
   });
+
   it('should render properly', () => {
     const component = create(<Score store={store} />);
     const instance = component.root;

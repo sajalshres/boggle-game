@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import fetchRank from '../redux/actions/fetchRank';
 
-class Rank extends Component {
+export class Rank extends Component {
   componentDidMount = () => {
     const { fetchRank } = this.props;
     fetchRank();
-    console.log(this.props.ranks);
   };
 
   getRanks = () => {
