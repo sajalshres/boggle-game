@@ -26,7 +26,9 @@
   "scripts": {
     "start": "PORT=8080 react-scripts start",
     "start:debug": "PORT=8080 react-scripts --inspect start --no-cache --runInBand",
-    "build": "react-scripts build",
+    "build": "npm install && react-scripts build",
+    "deploy": "cp -a build/. public/",
+    "heroku-postbuild": "npm build && npm deploy",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
