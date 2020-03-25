@@ -1,0 +1,25 @@
+{
+  "name": "boggle-game",
+  "version": "1.0.0",
+  "description": "A simple implementation of Boggle game using React and Rails",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "cd client && npm install && npm run build && cd -",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "npm run build && npm run deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajalshres/boggle-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sajalshres/boggle-game/issues"
+  },
+  "homepage": "https://github.com/sajalshres/boggle-game#readme"
+}

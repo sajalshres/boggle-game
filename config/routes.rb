@@ -10,4 +10,8 @@ Rails.application.routes.draw do
       post '/games/validate', to: 'games#validate'
     end
   end
+
+  get '*path', to: "application#fallback_index_html", constraints: ->(request) do
+    !request.xhr? && request.format.html?
+  end
 end

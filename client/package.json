@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8081/",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
@@ -24,11 +24,9 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "PORT=8080 react-scripts start",
-    "start:debug": "PORT=8080 react-scripts --inspect start --no-cache --runInBand",
-    "build": "npm install && react-scripts build",
-    "deploy": "cp -a build/. public/",
-    "heroku-postbuild": "npm build && npm deploy",
+    "start": "react-scripts start",
+    "start:debug": "react-scripts --inspect start --no-cache --runInBand",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
