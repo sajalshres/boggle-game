@@ -4,7 +4,7 @@ services:
     image: sajalshres/boggle-game:latest
     restart: on-failure
     ports:
-      - '8080:8080'
-      - '8081:8081'
+      - '3000:3000'
+      - '3001:3001'
     command: "rake start"
-    container_name: boogle_web
+    container_name: boggle_web

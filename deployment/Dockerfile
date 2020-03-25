@@ -9,6 +9,13 @@ WORKDIR /usr/src/app
 RUN apt-get update \
   && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
   #
+  # Install Cypress dependencies
+  && apt-get -y install --no-install-recommends libgtk2.0-0 libgtk-3-0 libnotify-dev \
+  libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb \
+  #
+  # Install Heroku cli
+  && curl https://cli-assets.heroku.com/install-ubuntu.sh | sh \
+  #
   # Install rails and bundler
   && gem install rails bundler \
   #
