@@ -25,11 +25,7 @@ const Home = () => {
           </li>
           <li>You can type the words in the input box as well.</li>
         </ul>
-        <a
-          href="https://en.wikipedia.org/wiki/Boggle"
-          target="_blank"
-          className="link"
-        >
+        <a href="https://en.wikipedia.org/wiki/Boggle" className="link">
           read more...
         </a>
       </div>
