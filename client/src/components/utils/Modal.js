@@ -7,7 +7,7 @@ const Modal = ({ show, handleClose, title, children }) => {
     <div className={show ? 'modal display-block' : 'modal display-none'}>
       <div className="modal-content">
         <div className="modal-header">
-          <h2 class="modal-title is-3">{title}</h2>
+          <h2 className="modal-title is-3">{title}</h2>
           <span className="close" onClick={handleClose}>
             <FontAwesomeIcon icon={faTimes} />
           </span>

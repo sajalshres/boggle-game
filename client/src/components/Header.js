@@ -12,17 +12,17 @@ const Header = () => {
     <header className="header">
       <h1 className="logo">Boggle</h1>
       <ul className="nav">
-        <Link to="/">
+        <Link to="/" className="home-page">
           <li className="nav-item">
             <FontAwesomeIcon icon={faHome} className="btn" />
           </li>
         </Link>
-        <Link to="/game">
+        <Link to="/game" className="boggle-page">
           <li className="nav-item">
             <FontAwesomeIcon icon={faGamepad} className="btn" />
           </li>
         </Link>
-        <Link to="/rank">
+        <Link to="/rank" className="rank-page">
           <li className="nav-item">
             <FontAwesomeIcon icon={faTrophy} className="btn" />
           </li>
